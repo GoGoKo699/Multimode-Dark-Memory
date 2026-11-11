@@ -4,6 +4,16 @@ This register identifies the primary versions underlying the [related-work compa
 
 The matching machine-readable bibliography is [bibliography.bib](bibliography.bib). Its citation keys match the identifiers below.
 
+## Educational anchor
+
+### Lidar13 — Protected-subspace foundations
+
+Daniel A. Lidar, **Review of Decoherence Free Subspaces, Noiseless Subsystems, and Dynamical Decoupling**, [arXiv:1208.5791v3](https://arxiv.org/abs/1208.5791v3), 24 October 2013. Published in *Advances in Chemical Physics* **154**, 295–354 (2014), [DOI](https://doi.org/10.1002/9781118742631.ch11). The selected reading source is the versioned preprint.
+
+- **Inspected:** Sections II.B–D, including the separate Kraus and Hamiltonian conditions; IV.E, Eqs. (86)–(90), on collective-SU(2) singlet encoding rate; V.A, Theorem 2 and Eqs. (99)–(100), on noiseless-subsystem algebra.
+- **Attribution:** educational foundations and notation translated in the [source bridge](../learning/anchor-and-bridge.md).
+- **Boundary:** the Hamiltonian condition for arbitrary bath states is stronger than this project's vacuum-conditioned protection. The SU(2) singlet count is not the lowering-only dark-space count, and the noiseless-subsystem decomposition assumes a dagger-closed unital algebra. Neither supplies the arbitrary-profile growing-rank theorem or its paid compiler.
+
 ## Collective decay and quantum memories
 
 ### LW03 — General decoherence-free subspace conditions

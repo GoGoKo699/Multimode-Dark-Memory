@@ -95,8 +95,8 @@ A. Asenjo-Garcia, M. Moreno-Cardoner, A. Albrecht, H. J. Kimble and D. E. Chang,
 Rémy Oudompheng, **Duality and canonical modules**, Spring School in Local Algebra, 1 April 2009. [Author-hosted notes](https://www.normalesup.org/~oudomphe/textes/alg-20090401.pdf).
 
 - **Inspected:** Section 2.2, Proposition 9 and Theorem 10, pp. 3–4; definitions of socle and injective hull on p. 3.
-- **Attribution:** the duality between a module's socle and its dual's top, and the finite-dimensional dualizing module $`\operatorname{Hom}_{\mathbb C}(A,\mathbb C)`$.
-- **Use here:** these standard facts imply $`\dim M\leq\dim A\,\dim\operatorname{soc}M`$. The notes are an accessible exposition, not an assertion of historical priority for that elementary inequality.
+- **Attribution:** the duality between a module's socle and its dual's top, and the finite-dimensional dualizing module $`\mathrm{Hom}_{\mathbb C}(A,\mathbb C)`$.
+- **Use here:** these standard facts imply $`\dim M\leq\dim A\,\dim\mathrm{soc}M`$. The notes are an accessible exposition, not an assertion of historical priority for that elementary inequality.
 
 ### BL26 — Powers of general linear forms
 

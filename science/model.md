@@ -120,11 +120,11 @@ Proposition 1 holds on the entire code and therefore on every such reference-ent
 
 ```math
 \mathcal R_t\circ\Phi_t\circ\mathcal V
-=\operatorname{id}_Q,
+=\mathrm{id}_Q,
 \qquad
 \frac12\left\|
 \mathcal R_t\circ\Phi_t\circ\mathcal V
--\operatorname{id}_Q
+-\mathrm{id}_Q
 \right\|_\diamond=0.
 ```
 

@@ -39,7 +39,7 @@ A=\mathbb C[z_1,\ldots,z_r]/(z_1,\ldots,z_r)^{N+1}
 act on the qubit Hilbert space through $`z_a\mapsto L_a`$. The common kernel is the module's socle. Finite local-algebra duality gives the usual bound
 
 ```math
-\dim M\leq(\dim A)\dim\operatorname{soc}M.
+\dim M\leq(\dim A)\dim\mathrm{soc}M.
 ```
 
 Oudompheng [Oud09], especially Proposition 9 and Theorem 10, gives an accessible account of the duality and injective-hull ingredients. The repository provides an elementary finite-dimensional proof. Its use here is an application of that module bound, rather than a new result in local algebra.

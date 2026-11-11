@@ -177,7 +177,7 @@ Define the smallest common dark dimension at a prescribed profile rank and its r
 
 ```math
 K_{\min}(N,r)
-=\min_{\substack{G\in\mathbb C^{r\times N}\\\operatorname{rank}G=r}}
+=\min_{\substack{G\in\mathbb C^{r\times N}\\\mathrm{rank}G=r}}
 \dim\mathcal K_G,
 \qquad
 \Delta(N,r)=N-\log K_{\min}(N,r).

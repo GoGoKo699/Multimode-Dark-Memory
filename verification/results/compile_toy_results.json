@@ -1,0 +1,109 @@
+{
+  "scope": "One four-emitter two-profile fixed-excitation code; exact rational annihilation, numerical unitary completion and listed finite-time normalized-Choi diagnostics. No diamond SDP or elementary-gate compiler executed.",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "coupling_rows": [
+    [
+      1,
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      2,
+      3,
+      4
+    ]
+  ],
+  "code_integer_columns": [
+    [
+      1,
+      2
+    ],
+    [
+      -2,
+      -1
+    ],
+    [
+      1,
+      -4
+    ],
+    [
+      0,
+      3
+    ]
+  ],
+  "squared_column_norms": [
+    6,
+    30
+  ],
+  "unitary_completion_frobenius_residual": 6.825029946951193e-16,
+  "annihilation_frobenius_residuals": [
+    0.0,
+    5.551115123125783e-17
+  ],
+  "endpoint_overrotation_radians": 0.02,
+  "endpoint_unitary_operator_distance": 0.01999966666833333,
+  "profile_perturbation": [
+    [
+      0.001,
+      -0.002,
+      0.0,
+      0.001
+    ],
+    [
+      0.0,
+      0.001,
+      -0.001,
+      0.0
+    ]
+  ],
+  "calibration_error_slope_bound": 0.10119156942384952,
+  "observations": [
+    {
+      "time": 0.0,
+      "exact_endpoint_normalized_choi_half_trace_error": 3.305966581169195e-16,
+      "approximate_endpoint_normalized_choi_half_trace_error": 3.349339017501916e-16,
+      "endpoint_half_diamond_analytic_upper_bound": 0.03999933333666666,
+      "perturbed_profile_normalized_choi_half_trace_error": 3.305966581169195e-16,
+      "perturbed_profile_half_diamond_analytic_upper_bound": 0.0
+    },
+    {
+      "time": 0.01,
+      "exact_endpoint_normalized_choi_half_trace_error": 3.705046392227618e-16,
+      "approximate_endpoint_normalized_choi_half_trace_error": 7.111581946979194e-05,
+      "endpoint_half_diamond_analytic_upper_bound": 0.03999933333666666,
+      "perturbed_profile_normalized_choi_half_trace_error": 2.5854727805544507e-08,
+      "perturbed_profile_half_diamond_analytic_upper_bound": 0.0010119156942384952
+    },
+    {
+      "time": 0.1,
+      "exact_endpoint_normalized_choi_half_trace_error": 3.494866284766075e-16,
+      "approximate_endpoint_normalized_choi_half_trace_error": 0.0002992824344303859,
+      "endpoint_half_diamond_analytic_upper_bound": 0.03999933333666666,
+      "perturbed_profile_normalized_choi_half_trace_error": 2.3798508692047207e-07,
+      "perturbed_profile_half_diamond_analytic_upper_bound": 0.010119156942384952
+    },
+    {
+      "time": 1.0,
+      "exact_endpoint_normalized_choi_half_trace_error": 1.3307063087775036e-15,
+      "approximate_endpoint_normalized_choi_half_trace_error": 0.00034098963671024376,
+      "endpoint_half_diamond_analytic_upper_bound": 0.03999933333666666,
+      "perturbed_profile_normalized_choi_half_trace_error": 1.9512057635097375e-06,
+      "perturbed_profile_half_diamond_analytic_upper_bound": 0.10119156942384952
+    },
+    {
+      "time": 10.0,
+      "exact_endpoint_normalized_choi_half_trace_error": 1.079145840494377e-14,
+      "approximate_endpoint_normalized_choi_half_trace_error": 0.0003290340854372461,
+      "endpoint_half_diamond_analytic_upper_bound": 0.03999933333666666,
+      "perturbed_profile_normalized_choi_half_trace_error": 7.113831876096203e-06,
+      "perturbed_profile_half_diamond_analytic_upper_bound": 1.0
+    }
+  ],
+  "status": "all bounded checks passed"
+}

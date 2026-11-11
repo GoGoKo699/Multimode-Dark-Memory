@@ -1,0 +1,37 @@
+{
+  "scope": "Four emitters and two explicitly retained two-level-truncated cavity oscillators; one fixed-excitation logical qubit. Finite identity check only; no bath elimination, diamond SDP or continuum simulation.",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0"
+  },
+  "joint_dimension": 64,
+  "interaction_on_encoded_vacuum_frobenius": 4.420593684439328e-17,
+  "observations": [
+    {
+      "time": 0.0,
+      "joint_isometry_operator_error": 0.0,
+      "bath_nonvacuum_amplitude_frobenius": 0.0
+    },
+    {
+      "time": 0.03,
+      "joint_isometry_operator_error": 7.859600714218516e-17,
+      "bath_nonvacuum_amplitude_frobenius": 2.3348261870730836e-18
+    },
+    {
+      "time": 0.4,
+      "joint_isometry_operator_error": 1.400280087400892e-16,
+      "bath_nonvacuum_amplitude_frobenius": 4.681575841863032e-17
+    },
+    {
+      "time": 2.0,
+      "joint_isometry_operator_error": 4.674126797740164e-16,
+      "bath_nonvacuum_amplitude_frobenius": 1.1704330616192698e-16
+    },
+    {
+      "time": 10.0,
+      "joint_isometry_operator_error": 9.37354147055682e-16,
+      "bath_nonvacuum_amplitude_frobenius": 3.1692686440792817e-16
+    }
+  ],
+  "status": "all full-vacuum checks passed"
+}

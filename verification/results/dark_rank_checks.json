@@ -1,0 +1,551 @@
+{
+  "scope": "Exact finite integer-matrix checks for listed n<=8 profiles only. The general rank law is analytical, not inferred from numerics.",
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "instances": [
+    {
+      "label": "inhomogeneous_single_mode_n4",
+      "n": 4,
+      "rank_r": 1,
+      "G_integer_rows": [
+        [
+          1,
+          2,
+          3,
+          4
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        3,
+        2,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 6,
+      "binomial_lower_bound": 3.2,
+      "logical_qubits_floor_log2_dimension": 2,
+      "dark_code_redundancy_bits": 1.415037499278844,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 5.600771067543689e-16,
+      "floating_annihilation_frobenius_residuals": [
+        9.255558542105616e-16
+      ]
+    },
+    {
+      "label": "integer_profiles_n4_r2",
+      "n": 4,
+      "rank_r": 2,
+      "G_integer_rows": [
+        [
+          3,
+          0,
+          -2,
+          3
+        ],
+        [
+          3,
+          2,
+          -3,
+          1
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        2,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 3,
+      "binomial_lower_bound": 1.0666666666666667,
+      "logical_qubits_floor_log2_dimension": 1,
+      "dark_code_redundancy_bits": 2.415037499278844,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 2.321803065453476e-16,
+      "floating_annihilation_frobenius_residuals": [
+        4.163336342344337e-17,
+        5.551115123125783e-17
+      ]
+    },
+    {
+      "label": "integer_profiles_n4_r3",
+      "n": 4,
+      "rank_r": 3,
+      "G_integer_rows": [
+        [
+          -3,
+          -3,
+          2,
+          3
+        ],
+        [
+          1,
+          -1,
+          0,
+          -2
+        ],
+        [
+          -1,
+          -2,
+          -1,
+          -2
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 2,
+      "binomial_lower_bound": 0.45714285714285713,
+      "logical_qubits_floor_log2_dimension": 1,
+      "dark_code_redundancy_bits": 3.0,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 2.220446049250313e-16,
+      "floating_annihilation_frobenius_residuals": [
+        0.0,
+        0.0,
+        1.1102230246251565e-16
+      ]
+    },
+    {
+      "label": "inhomogeneous_single_mode_n6",
+      "n": 6,
+      "rank_r": 1,
+      "G_integer_rows": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        5,
+        9,
+        5,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 20,
+      "binomial_lower_bound": 9.142857142857142,
+      "logical_qubits_floor_log2_dimension": 4,
+      "dark_code_redundancy_bits": 1.6780719051126374,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 1.4296813528523192e-15,
+      "floating_annihilation_frobenius_residuals": [
+        1.4797095738418223e-14
+      ]
+    },
+    {
+      "label": "integer_profiles_n6_r2",
+      "n": 6,
+      "rank_r": 2,
+      "G_integer_rows": [
+        [
+          -2,
+          -3,
+          0,
+          2,
+          -2,
+          1
+        ],
+        [
+          3,
+          3,
+          3,
+          2,
+          2,
+          -3
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        4,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 9,
+      "binomial_lower_bound": 2.2857142857142856,
+      "logical_qubits_floor_log2_dimension": 3,
+      "dark_code_redundancy_bits": 2.830074998557688,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 9.041448054056836e-16,
+      "floating_annihilation_frobenius_residuals": [
+        2.0841646759723597e-15,
+        3.0268851863655082e-15
+      ]
+    },
+    {
+      "label": "integer_profiles_n6_r3",
+      "n": 6,
+      "rank_r": 3,
+      "G_integer_rows": [
+        [
+          -2,
+          2,
+          -1,
+          3,
+          -1,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          -1,
+          2
+        ],
+        [
+          0,
+          -1,
+          0,
+          -3,
+          -3,
+          1
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        3,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 4,
+      "binomial_lower_bound": 0.7619047619047619,
+      "logical_qubits_floor_log2_dimension": 2,
+      "dark_code_redundancy_bits": 4.0,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 3.8832182960188954e-16,
+      "floating_annihilation_frobenius_residuals": [
+        1.2539255187600815e-15,
+        1.3802644315448593e-15,
+        5.034405433428661e-16
+      ]
+    },
+    {
+      "label": "inhomogeneous_single_mode_n8",
+      "n": 8,
+      "rank_r": 1,
+      "G_integer_rows": [
+        [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        7,
+        20,
+        28,
+        14,
+        0,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 70,
+      "binomial_lower_bound": 28.444444444444443,
+      "logical_qubits_floor_log2_dimension": 6,
+      "dark_code_redundancy_bits": 1.8707169830550336,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 3.1821426970759707e-15,
+      "floating_annihilation_frobenius_residuals": [
+        1.3535289024361958e-13
+      ]
+    },
+    {
+      "label": "integer_profiles_n8_r2",
+      "n": 8,
+      "rank_r": 2,
+      "G_integer_rows": [
+        [
+          -2,
+          -1,
+          0,
+          -2,
+          1,
+          2,
+          -2,
+          2
+        ],
+        [
+          1,
+          0,
+          1,
+          -3,
+          1,
+          2,
+          2,
+          1
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        6,
+        13,
+        8,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 28,
+      "binomial_lower_bound": 5.688888888888889,
+      "logical_qubits_floor_log2_dimension": 4,
+      "dark_code_redundancy_bits": 3.1926450779423963,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 1.8419967533821644e-15,
+      "floating_annihilation_frobenius_residuals": [
+        1.3417928855022168e-14,
+        8.511661231368297e-15
+      ]
+    },
+    {
+      "label": "integer_profiles_n8_r3",
+      "n": 8,
+      "rank_r": 3,
+      "G_integer_rows": [
+        [
+          -3,
+          1,
+          -3,
+          2,
+          0,
+          -2,
+          3,
+          -2
+        ],
+        [
+          -1,
+          0,
+          -3,
+          0,
+          3,
+          -2,
+          3,
+          0
+        ],
+        [
+          2,
+          2,
+          -1,
+          2,
+          1,
+          -1,
+          0,
+          1
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        5,
+        7,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 13,
+      "binomial_lower_bound": 1.5515151515151515,
+      "logical_qubits_floor_log2_dimension": 3,
+      "dark_code_redundancy_bits": 4.299560281858907,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 7.336597932959173e-16,
+      "floating_annihilation_frobenius_residuals": [
+        4.692633357125401e-15,
+        4.12083046687706e-15,
+        3.575347259624055e-15
+      ]
+    },
+    {
+      "label": "independent_loss_full_rank",
+      "n": 8,
+      "rank_r": 8,
+      "G_integer_rows": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 1,
+      "binomial_lower_bound": 0.01989121989121989,
+      "logical_qubits_floor_log2_dimension": 0,
+      "dark_code_redundancy_bits": 8.0,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 0.0,
+      "floating_annihilation_frobenius_residuals": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "label": "two_disjoint_dicke_blocks",
+      "n": 8,
+      "rank_r": 2,
+      "G_integer_rows": [
+        [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "common_kernel_sector_dimensions": [
+        1,
+        6,
+        13,
+        12,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      "common_kernel_total_dimension": 36,
+      "binomial_lower_bound": 5.688888888888889,
+      "logical_qubits_floor_log2_dimension": 5,
+      "dark_code_redundancy_bits": 2.830074998557688,
+      "exact_annihilation_all_sectors": true,
+      "orthonormal_basis_frobenius_residual": 1.4368252679311785e-15,
+      "floating_annihilation_frobenius_residuals": [
+        1.054382275599308e-15,
+        6.733532167871036e-16
+      ]
+    }
+  ],
+  "status": "all listed finite exact-rational checks passed"
+}

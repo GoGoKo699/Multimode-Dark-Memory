@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this repository and identify the exact commit used."
+title: "Multimode Dark Memory: Passive Storage from Spatial Interaction Rank"
+type: software
+authors:
+  - family-names: Lin
+    given-names: Ruge
+date-released: 2026-11-11
+url: "https://github.com/GoGoKo699/Multimode-Dark-Memory"
+license: MIT

@@ -1,0 +1,17 @@
+# Multimode Dark Memory
+
+Question: how many unknown quantum bits can N two-level emitters store passively when a vacuum reservoir couples through r arbitrary known collective lowering profiles?
+
+Main scope: a common-frequency excitation-conserving rotating-wave model, bath vacuum, and no quantum bypass during storage. The resource is spatial interaction rank, not raw oscillator number. The common dark kernel has dimension at least 2^N/binom(N+r,r); worst-profile dark-code redundancy is Theta(r log(N/r)) for1<=r=o(N). Standard DFS criteria and one-mode counts are inherited.
+
+- Science overview: science/README.md
+- Exact physical model, input/output and assumptions: science/model.md
+- Finite theorem, injection proof, stationary sectors and minimax redundancy: science/rank-law.md
+- Paid block encoding, rational input, gate synthesis and separate calibration error: science/encoding-and-precision.md
+- Worked four-emitter qubit and finite counts: science/examples.md
+- Physical/computational limits: science/limitations.md
+- Primary comparisons: references/related-work.md
+- Precise versions and source locators: references/source-register.md
+- Reproduction and evidence scope: verification/README.md
+
+Keep dark-code redundancy distinct from unrestricted passive quantum capacity. Fixed-excitation codes are stationary; general dark codes undergo known free precession. Polynomial endpoint compilation is established only in the specified fixed/slowly-growing-rank regime. No generic free-space, finite-temperature, local-noise or experimental-calibration guarantee follows.

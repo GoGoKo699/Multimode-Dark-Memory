@@ -10,37 +10,41 @@ Fix a constant $`c>0`$, take $`N`$ large enough that $`1\le b=\lfloor c\log_2N\r
 
 Partition $`mb`$ emitters into $`m`$ blocks of size $`b`$. Initialize the fewer than $`b`$ unused emitters in their ground state. There are block encoders and inverse decoders storing $`k`$ logical qubits, with
 
+**(E1)**
+
 ```math
 k\ge N-b-m\left[\log_2\binom{b+r}{r}+\log_2(b+1)+1\right].
-\tag{E1}
 ```
 
 The lower bound can be replaced by zero whenever its right side is negative. Every block code has a definite excitation number. The ideal logical channel is therefore the identity for every storage time in the [vacuum model](model.md), without a clock-dependent phase correction.
 
 For any requested endpoint error $`0<\epsilon<1`$, the classical preprocessing and circuit-description size are polynomial in
 
+**(E2)**
+
 ```math
 N,\quad r,\quad B,\quad \log(1/\epsilon).
-\tag{E2}
 ```
 
 Here $`c`$ is fixed and the endpoint gate model is CNOT gates between arbitrary pairs within one block, together with single-qubit rotations. A conservative elementary-gate bound per encoder or decoder is
 
+**(E3)**
+
 ```math
 Q=O\!\left(mb^3 4^b\right)
  =O\!\left(N^{1+2c}(\log N)^2\right).
-\tag{E3}
 ```
 
-This bound uses generic unitary synthesis; it is deliberately not optimized. Replacing the one-qubit rotations by a fixed inverse-closed universal gate library gives $`O(Q\,\operatorname{polylog}(Q/\epsilon))`$ gates. All numerical precision and single-qubit approximation costs are paid in (E2) and this latter gate count. No state-preparation oracle or QRAM is supplied.
+This bound uses generic unitary synthesis; it is deliberately not optimized. Replacing the one-qubit rotations by a fixed inverse-closed universal gate library gives $`O(Q\,\mathrm{polylog}(Q/\epsilon))`$ gates. All numerical precision and single-qubit approximation costs are paid in (E2) and this latter gate count. No state-preparation oracle or QRAM is supplied.
 
 The implemented logical channel obeys
+
+**(E4)**
 
 ```math
 \sup_{t\ge0}\frac12\left\|
 \widetilde{\mathcal R}\circ\Phi_t\circ\widetilde{\mathcal E}
 -\mathrm{id}_{2^k}\right\|_\diamond\le\epsilon.
-\tag{E4}
 ```
 
 The supremum concerns endpoint synthesis error under the **exact supplied dynamics**. It is not a uniform-in-time tolerance to a wrong coupling matrix.
@@ -51,25 +55,28 @@ If $`r=o(\log N)`$, (E1) gives $`k=N-o(N)`$. For larger ranks $`r=o(N)`$, the gl
 
 Write the restricted lowering operator on block $`\nu`$ as
 
+**(E5)**
+
 ```math
 L_{a,\nu}=\sum_{j\in\nu}G_{aj}\sigma_j^-,
 \qquad
 K_\nu=\bigcap_{a=1}^{r}\ker L_{a,\nu}.
-\tag{E5}
 ```
 
 The block's actual row rank can be below $`r`$; using $`r`$ only weakens the following bound. The finite rank theorem gives
 
+**(E6)**
+
 ```math
 \dim K_\nu\ge\frac{2^b}{\binom{b+r}{r}}.
-\tag{E6}
 ```
 
 Every lowering operator decreases excitation number by one, so $`K_\nu`$ is a direct sum of its $`b+1`$ excitation sectors. Some sector has dark dimension
 
+**(E7)**
+
 ```math
 d_\nu\ge\frac{2^b}{(b+1)\binom{b+r}{r}}.
-\tag{E7}
 ```
 
 Compute all sector kernels, select a largest one, and retain any $`2^{k_\nu}`$ orthonormal columns, where $`k_\nu=\lfloor\log_2 d_\nu\rfloor`$. Their span is the block code. Its input consists of $`k_\nu`$ unknown qubits and $`b-k_\nu`$ initialized physical qubits. Those initialized qubits are included in the $`N`$-emitter count.
@@ -78,10 +85,11 @@ For the global code $`\bigotimes_\nu K_\nu^{\mathrm{code}}`$, every restricted $
 
 Summing $`k_\nu\ge b-\log_2\binom{b+r}{r}-\log_2(b+1)-1`$ proves (E1). For $`r=o(b)`$,
 
+**(E8)**
+
 ```math
 \frac1b\log_2\binom{b+r}{r}
 \le\frac rb\log_2\frac{e(b+r)}r\longrightarrow0.
-\tag{E8}
 ```
 
 The lost leftover emitters and the fixed-excitation overhead also have vanishing density. Thus logarithmic blocks achieve rate one throughout $`r=o(\log N)`$.
@@ -90,38 +98,42 @@ The lost leftover emitters and the fixed-excitation overhead also have vanishing
 
 In excitation sector $`s`$, build the stacked rational matrix
 
+**(E9)**
+
 ```math
 A_{\nu,s}:\mathcal H_{b,s}\longrightarrow
 \bigoplus_{a=1}^{r}\mathcal H_{b,s-1},
 \qquad
 \psi\longmapsto(L_{1,\nu}\psi,\ldots,L_{r,\nu}\psi).
-\tag{E9}
 ```
 
 Its column count is at most $`D=2^b`$ and its row count at most $`rD`$. Each nonzero entry is one supplied coefficient. The matrix is formed explicitly, rather than queried through an oracle. Computing its nullspace over $`\mathbb Q(i)`$ gives exact membership and exact sector dimension.
 
 To see why small singular values do not create an uncharged precision promise, clear the at most $`2rb`$ coefficient denominators in one block. This gives integer real and imaginary parts of bit length
 
+**(E10)**
+
 ```math
 H=O(rbB).
-\tag{E10}
 ```
 
 Fraction-free elimination is polynomial in the matrix dimensions and $`H`$. More explicitly, after selecting a nonsingular pivot minor of order at most $`D`$, Cramer's rule constructs an integer Gaussian-rational nullspace basis using pivot determinants and cofactors. Hadamard's inequality bounds the bit length of its entries by
 
+**(E11)**
+
 ```math
 C=O\!\left(D(H+\log D)\right).
-\tag{E11}
 ```
 
 Multiplying a basis column by its nonzero common denominator changes no subspace. Consequently a full-column-rank integer basis $`Z`$ can be chosen with entries of the size in (E11). Enlarge $`C`$ by one if necessary so that the bound means $`|Z_{ij}|\le2^C`$ also for complex Gaussian-integer entries.
 
 The Gram matrix $`Z^\dagger Z`$ has a positive integer determinant, so that determinant is at least one. Its largest eigenvalue is at most $`D^2 2^{2C}`$. If $`d`$ is the number of columns, then
 
+**(E12)**
+
 ```math
 \lambda_{\min}(Z^\dagger Z)
 \ge\left(D^2 2^{2C}\right)^{-(d-1)}.
-\tag{E12}
 ```
 
 Thus the number of precision bits needed to resolve this chosen basis's conditioning is polynomial in $`D,H`$. It can be large as a function of $`b`$, but $`D=2^b\le N^c`$ is polynomial in the declared compiler regime. No lower bound on an experimentally unknown spectral gap is being assumed.
@@ -138,19 +150,21 @@ These synthesis ingredients are inherited. See Barenco et al., [*Elementary gate
 
 All required numerical quantities are computed to enough bits to certify
 
+**(E13)**
+
 ```math
 \|\widetilde U_\nu-U_\nu\|_\infty\le\frac{\epsilon}{2m}.
-\tag{E13}
 ```
 
 This certification need not resolve the angle of a nearly zero pivot pair. Here is an explicit thresholded implementation. Put $`\delta=\epsilon/(2m)`$ and choose $`\eta=\delta/(100D^2)`$. In two-level QR elimination, maintain certified absolute enclosures for the working matrix. Skip a pair only when its norm is at most $`2\eta`$, and normalize a pair only when its norm is at least $`\eta`$. Enclosures finer than $`\eta/10`$ leave an overlap in which either decision is allowed. A normalized rotation can be chosen from dyadic approximations to the pair; its exact two-by-two matrix is then obtained by normalizing those dyadic data. Its residual on the actual pair is bounded by the absolute input-enclosure error. Thus no division by an arbitrarily small, unresolved number is required.
 
-For clarity, consider first exact rotations with these thresholds. At the end of the elimination of one column, each skipped entry below the diagonal has magnitude at most $`2\eta`$. Later rotations act unitarily on trailing rows and preserve that earlier column's tail norm. Hence the resulting unitary $`V`$ satisfies $`\|\operatorname{lower}(V)\|_F\le2D\eta`$. Since $`(|V_{ij}|^2)_{ij}`$ is doubly stochastic,
+For clarity, consider first exact rotations with these thresholds. At the end of the elimination of one column, each skipped entry below the diagonal has magnitude at most $`2\eta`$. Later rotations act unitarily on trailing rows and preserve that earlier column's tail norm. Hence the resulting unitary $`V`$ satisfies $`\|\mathrm{lower}(V)\|_F\le2D\eta`$. Since $`(|V_{ij}|^2)_{ij}`$ is doubly stochastic,
+
+**(E13a)**
 
 ```math
-\sum_{i<j}(j-i)|V_{ij}|^2
-=\sum_{i>j}(i-j)|V_{ij}|^2.
-\tag{E13a}
+\sum_{i\lt j}(j-i)|V_{ij}|^2
+=\sum_{i\gt j}(i-j)|V_{ij}|^2.
 ```
 
 Its strictly upper-triangular squared norm is therefore at most $`D`$ times its strictly lower-triangular squared norm. Replacing each diagonal element by its unit-modulus phase now changes $`V`$ by at most $`4D^{3/2}\eta`$ in Frobenius norm. The chosen $`\eta`$ makes this smaller than $`\delta/20`$. These diagonal elements are bounded away from zero at this tolerance, so their phases require no small-denominator assumption.
@@ -165,16 +179,19 @@ The encoder uses the product of these block circuits. The decoder uses their inv
 
 Let $`\mathcal E,\mathcal R`$ denote the ideal block encoder and decoder, and $`\widetilde{\mathcal E},\widetilde{\mathcal R}`$ their implemented versions. For unitary channels, half-diamond distance is at most the operator-norm distance of suitably phased implementing unitaries. Tensor-product telescoping and (E13) therefore give
 
+**(E14)**
+
 ```math
 \frac12\|\widetilde{\mathcal E}-\mathcal E\|_\diamond
 \le\frac\epsilon2,
 \qquad
 \frac12\|\widetilde{\mathcal R}-\mathcal R\|_\diamond
 \le\frac\epsilon2.
-\tag{E14}
 ```
 
 Initialization, restriction to the logical subspace and final partial trace cannot increase these complete-channel distances. In the exact vacuum model, $`\mathcal R\Phi_t\mathcal E=\mathrm{id}`$ for every $`t`$. The triangle inequality and contractivity under CPTP pre- and post-composition give
+
+**(E15)**
 
 ```math
 \begin{aligned}
@@ -184,7 +201,6 @@ Initialization, restriction to the logical subspace and final partial trace cann
  +\frac12\|\widetilde{\mathcal E}-\mathcal E\|_\diamond\\
 &\le\epsilon.
 \end{aligned}
-\tag{E15}
 ```
 
 This argument permits fully correlated bath dynamics across the blocks and protects logical inputs entangled with a reference. A small bright component introduced by an imperfect encoder may subsequently decay; it cannot amplify the initial complete-channel distance from the ideal encoded state.
@@ -195,20 +211,22 @@ For a declared Markov counterpart, absorb all decay-rate factors into the rows $
 
 For $`\mathcal D[L](X)=LXL^\dagger-\{L^\dagger L,X\}/2`$, expansion into cross terms gives
 
+**(E16)**
+
 ```math
 \|\mathcal D[L+E]-\mathcal D[L]\|_\diamond
 \le4\|L\|_\infty\|E\|_\infty+2\|E\|_\infty^2.
-\tag{E16}
 ```
 
 Using $`\|\sum_jv_j\sigma_j^-\|_\infty\le\sqrt N\|v\|_2`$ and Duhamel's formula for two CPTP semigroups gives the sufficient bound
+
+**(E17)**
 
 ```math
 \frac12\|\Phi_t-\widehat\Phi_t\|_\diamond
 \le tN\sum_a\left(
 2\|\widehat g_a\|_2\|\delta g_a\|_2+\|\delta g_a\|_2^2
 \right).
-\tag{E17}
 ```
 
 The right side may be capped at one. A separate Hamiltonian mismatch adds $`t\|\delta H\|_\infty`$ in units $`\hbar=1`$. Combining (E15) with (E17) adds this storage error to the endpoint budget. Equation (E17) is a sufficient, generally nonoptimal bound; it does not assume independent noise across emitters or blocks.

@@ -11,7 +11,7 @@ For $`N`$ two-level emitters with an arbitrary supplied rank-$`r`$ matrix of col
 
 The worst-profile **dark-code redundancy** has order $`r\log(N/r)`$ for $`1\le r=o(N)`$. Every such profile sequence therefore permits $`N-o(N)`$ logical qubits. Uneven couplings and a growing number of profiles are allowed; permutation symmetry is not required.
 
-**[Read the science](science/README.md)** · [Exact theorem and proof](science/rank-law.md) · [Four-emitter stored qubit](science/examples.md) · [Reproduce the checks](verification/README.md)
+**[Read the science](science/README.md)** · [Learn the argument](learning/README.md) · [30 milestones](learning/milestones.md) · [Four-emitter stored qubit](science/examples.md) · [Reproduce the checks](verification/README.md)
 
 ## What is established
 
@@ -48,6 +48,10 @@ Standard DFS criteria and the single-mode high-rate count are inherited. The [co
 | Attribution and novelty boundary | [Related work](references/related-work.md) → [source register](references/source-register.md) |
 
 [llms.txt](llms.txt) maps scientific questions to authoritative pages.
+
+## Learn the argument
+
+The [learning route](learning/README.md) starts with the stored-qubit example and connects protected-subspace physics to the counting theorem and paid encoder. Its single educational anchor is Daniel A. Lidar's DFS review, [arXiv:1208.5791v3](https://arxiv.org/abs/1208.5791v3), 24 October 2013. The [source bridge](learning/anchor-and-bridge.md) translates the review's assumptions and notation; the [30-milestone map](learning/milestones.md) follows the project's background and contribution through to its resource and evidence limits.
 
 ## Reproduce
 

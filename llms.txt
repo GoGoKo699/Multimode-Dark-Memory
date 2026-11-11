@@ -5,6 +5,9 @@ Question: how many unknown quantum bits can N two-level emitters store passively
 Main scope: a common-frequency excitation-conserving rotating-wave model, bath vacuum, and no quantum bypass during storage. The resource is spatial interaction rank, not raw oscillator number. The common dark kernel has dimension at least 2^N/binom(N+r,r); worst-profile dark-code redundancy is Theta(r log(N/r)) for1<=r=o(N). Standard DFS criteria and one-mode counts are inherited.
 
 - Science overview: science/README.md
+- Example-first learning route: learning/README.md
+- Single selected anchor and exact source-to-project translation: learning/anchor-and-bridge.md
+- Project understanding map, M01–M30 with dependencies and sources: learning/milestones.md
 - Exact physical model, input/output and assumptions: science/model.md
 - Finite theorem, injection proof, stationary sectors and minimax redundancy: science/rank-law.md
 - Paid block encoding, rational input, gate synthesis and separate calibration error: science/encoding-and-precision.md
@@ -15,3 +18,5 @@ Main scope: a common-frequency excitation-conserving rotating-wave model, bath v
 - Reproduction and evidence scope: verification/README.md
 
 Keep dark-code redundancy distinct from unrestricted passive quantum capacity. Fixed-excitation codes are stationary; general dark codes undergo known free precession. Polynomial endpoint compilation is established only in the specified fixed/slowly-growing-rank regime. No generic free-space, finite-temperature, local-noise or experimental-calibration guarantee follows.
+
+Learning starts with the four-emitter stored qubit, uses Lidar arXiv:1208.5791v3 (24 October 2013) for DFS foundations, and follows the project-defined milestone map. The anchor's bath-state-independent Hamiltonian criterion, collective-SU(2) singlet count and adjoint-closed noise-algebra theorem have stronger/different assumptions than the lowering-only vacuum memory; use the bridge before transferring them. The map expresses shared understanding targets; it does not record learner progress.

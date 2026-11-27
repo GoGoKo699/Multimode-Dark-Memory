@@ -37,4 +37,4 @@ The generic block compiler is proved with explicit finite-input and gate-model a
 - [Toy endpoint and calibration checks](results/compile_toy_results.json).
 - [Full vacuum Hamiltonian checks](results/vacuum_results.json).
 
-After changing a scientific claim, matrix convention or verification program, rerun the affected commands and reconcile the explanation with their actual outputs. Current repository verification is performed by these local commands; no GitHub Actions requirement is configured in this initial scientific integration.
+After changing a scientific claim, matrix convention or verification program, rerun the affected commands and reconcile the explanation with their actual outputs. The [hosted mathematics workflow](hosted_math/README.md) separately compares the proposed source with GitHub's actual rendering at both viewport widths.

@@ -13,6 +13,14 @@ The worst-profile **dark-code redundancy** has order $`r\log(N/r)`$ for $`1\le r
 
 **[Read the science](science/README.md)** · [Learn the argument](learning/README.md) · [30 milestones](learning/milestones.md) · [Four-emitter stored qubit](science/examples.md) · [Reproduce the checks](verification/README.md)
 
+## Write, hold and read
+
+1. **Compile the blocks.** Supply the exact complex-rational lowering profiles and an endpoint error budget. Partition the emitters into logarithmic-size blocks. Within each excitation sector, stack the restricted lowering matrices and compute their [common nullspace](science/encoding-and-precision.md#3-exact-classical-linear-algebra). Pick the sector with the largest dark dimension in each block and keep the largest power of two of its orthonormal basis states. Complete the chosen encoding columns to a block unitary and [compile it](science/encoding-and-precision.md#4-from-block-matrices-to-circuits) into CNOTs and single-qubit rotations.
+2. **Write and hold.** Initialize the redundancy emitters for each block and put the leftover emitters in their ground states. Apply each block encoder to its part of the unknown input and the initialized emitters. Start storage with the reservoir in vacuum. During storage the emitters share one transition frequency and undergo the specified excitation-preserving rotating-wave interaction through the supplied spatial span. The code has a fixed total excitation number, so its free evolution gives a common phase. The physical emitters carry the state throughout the hold without measurement, reset or control.
+3. **Read.** Apply the inverse block circuits and return the logical register, including its correlations with any reference. Release the initialized redundancy and unused emitters. Decoding uses no measurement, flag or classical outcome processing.
+
+The [compilation theorem](science/encoding-and-precision.md#1-endpoint-compilation-theorem) counts all emitters, classical arithmetic, gate synthesis and precision. It gives polynomial endpoints with rate tending to one at fixed rank or rank growing slower than the logarithm of emitter count. The broader rank theorem gives a dark-space dimension for every sublinear rank. The synthesis error bound is uniform in hold time under the exact supplied dynamics. [Coefficient error](science/encoding-and-precision.md#6-wrong-coefficients-are-a-different-error-source) has its own time-dependent bound. [Four-emitter example](science/examples.md)
+
 ## What is established
 
 | Result | Guarantee and scope |
